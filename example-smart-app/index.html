@@ -83,14 +83,14 @@
       FHIR.oauth2.ready()
           .then(client => client.request("Patient"))
           .then(console.log("asd"))
-          .catch(console.error("bbb"));
+          .catch((error) => {console.error(error)});
       </script>
 
     <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
    <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
+    <!--<script>
       extractData().then(
         //Display Patient Demographics and Observations if extractData was success
         function(p) {
@@ -103,6 +103,6 @@
           $('#errors').html('<p> Failed to call FHIR Service </p>');
         }
       );
-    </script>
+    </script>-->
   </body>
 </html>
