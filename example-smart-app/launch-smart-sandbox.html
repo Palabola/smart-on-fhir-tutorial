@@ -29,7 +29,13 @@
   
     <!-- Currently, the SMART App Launcher (https://launch.smarthealthit.org) does not check/validate the client_id field.
         If/when this changes, or when working with other authorization servers, please update the client_id field here. -->
-    <script type= "module" src='./src/js/fhir_authorize.js'></script>
+    <!-- <script type= "module" src='./src/js/fhir_authorize.js'></script> -->
+    <script>
+      FHIR.oauth2.authorize({
+          "client_id": "my_web_app",
+          "scope": "patient/*.read"
+      });
+      </script>
     <div class="spinner">
       <div class="bounce1"></div>
       <div class="bounce2"></div>
