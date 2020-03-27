@@ -69,7 +69,7 @@
       }
     }
 
-    return FHIR.oauth2.ready()
+    /*return FHIR.oauth2.ready()
     .then(client => client.request("Patient"))
     .then(() => {
       console.log("asd"); 
@@ -77,10 +77,10 @@
       $('#holder').show();})
     .catch((error) => {
       console.log("asd"); console.error(error);
-    });
+    });*/
 
-    //FHIR.oauth2.ready(onReady, onError);
-    //return ret.promise();
+    FHIR.oauth2.ready(onReady, onError);
+    return ret.promise();
 
   };
 
