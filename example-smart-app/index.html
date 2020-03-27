@@ -80,7 +80,7 @@
     <!-- <script src='./src/js/example-smart-app.js'></script> -->
     <script> 
     console.log("2.3.1.1"); 
-    return FHIR.oauth2.ready()
+    FHIR.oauth2.ready()
     .then(client => client.request("Patient"))
     .catch(console.log("error"));
     </script>
@@ -89,7 +89,7 @@
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
    <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
+    <!-- <script>
       extractData().then(
         //Display Patient Demographics and Observations if extractData was success
         function(p) {
@@ -102,6 +102,6 @@
           $('#errors').html('<p> Failed to call FHIR Service </p>');
         }
       );
-    </script>
+    </script>-->
   </body>
 </html>
