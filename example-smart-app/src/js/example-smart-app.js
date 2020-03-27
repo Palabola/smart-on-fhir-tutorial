@@ -75,7 +75,9 @@
       console.log("asd"); 
       $('#loading').hide(); 
       $('#holder').show();})
-    .catch((error) => {console.error(error);});
+    .catch((error) => {
+      console.log("asd"); console.error(error);
+    });
 
     //FHIR.oauth2.ready(onReady, onError);
     //return ret.promise();
