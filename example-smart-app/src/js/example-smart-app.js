@@ -79,7 +79,7 @@
       console.log("asd"); console.error(error);
     });*/
 
-    console.log("2.0.0");
+    console.log("2.0.5");
     FHIR.oauth2.ready(onReady, onError);
     return ret.promise();
 
