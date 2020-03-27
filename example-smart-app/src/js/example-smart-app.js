@@ -69,13 +69,8 @@
       }
     }
 
-    return FHIR.oauth2.ready()
-    //.then(client => client.request("Patient"))
-    .then($('#fname').html("success"))
-    .catch($('#fname').html("exception"));
-
-    //FHIR.oauth2.ready(onReady, onError);
-    //return ret.promise();
+    FHIR.oauth2.ready(onReady, onError);
+    return ret.promise();
 
   };
 
