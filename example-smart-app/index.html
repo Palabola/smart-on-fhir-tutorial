@@ -82,8 +82,8 @@
     <script>
       FHIR.oauth2.ready()
           .then(client => client.request("Patient"))
-          .then(console.log("asd"))
-          .catch((error) => {console.error(error)});
+          .then(() => {console.log("asd"); $('#loading').hide(); $('#holder').show();})
+          .catch((error) => {console.error(error);});
       </script>
 
     <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
