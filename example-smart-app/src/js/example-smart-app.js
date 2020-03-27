@@ -4,7 +4,8 @@
     var ret = $.Deferred();
 
     function onError() {
-      console.log('Loading error', arguments);
+      $('#fname').html("error");
+      //console.log('Loading error', arguments);
       ret.reject();
     }
 
@@ -70,8 +71,8 @@
 
     return FHIR.oauth2.ready()
     .then(client => client.request("Patient"))
-    .then(console.log("ready"))
-    .catch(console.error);
+    .then( $('#fname').html("success"))
+    .catch($('#fname').html("exception"));
 
     //FHIR.oauth2.ready(onReady, onError);
     //return ret.promise();
