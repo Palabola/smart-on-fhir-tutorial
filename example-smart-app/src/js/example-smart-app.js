@@ -69,19 +69,14 @@
       }
     }
 
-    /*return FHIR.oauth2.ready()
-    .then(client => client.request("Patient"))
-    .then(() => {
-      console.log("asd"); 
-      $('#loading').hide(); 
-      $('#holder').show();})
-    .catch((error) => {
-      console.log("asd"); console.error(error);
-    }); */
+    console.log("2.0.5.1");
+    return FHIR.oauth2.ready()
+    .then(client => client.request("Patient"));
+   
 
-    console.log("2.0.5");
-    FHIR.oauth2.ready(onReady, onError);
-    return ret.promise();
+    
+    //FHIR.oauth2.ready(onReady, onError);
+    //return ret.promise();
 
   };
 
