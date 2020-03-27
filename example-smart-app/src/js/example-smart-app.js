@@ -68,8 +68,13 @@
       }
     }
 
-    FHIR.oauth2.ready(onReady, onError);
-    return ret.promise();
+    return FHIR.oauth2.ready()
+    .then(client => client.request("Patient"))
+    .then(console.log("ready"))
+    .catch(console.error);
+
+    //FHIR.oauth2.ready(onReady, onError);
+    //return ret.promise();
 
   };
 
