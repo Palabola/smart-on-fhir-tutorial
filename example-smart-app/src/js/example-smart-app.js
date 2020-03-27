@@ -10,9 +10,10 @@
     }
 
     function onReady(smart)  {
+      console.log(smart);
+      console.log(smart.patient);
       if (smart.hasOwnProperty('patient')) {
-        console.log(smart);
-        console.log(smart.patient);
+        
         var patient = smart.patient;
         var pt = patient.read();
         var obv = smart.patient.api.fetchAll({
@@ -71,11 +72,11 @@
       }
     }
 
-    console.log("2.0.7.2"); 
+    console.log("2.0.7.3"); 
     return FHIR.oauth2.ready()
-    .then(client => client.request("Patient"))
-    .then(onReady)
-    .catch(console.log("error"));
+    .then(client => client.request("Patient/${client.patient.id}"))
+    .then(console.log)
+    .catch(console.log);
     
     //FHIR.oauth2.ready(onReady, onError);
     //return ret.promise();
