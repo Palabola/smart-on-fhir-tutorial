@@ -69,7 +69,11 @@
       }
     }
 
+<<<<<<< HEAD
     console.log("2.0.7.1"); 
+=======
+    console.log("2.0.6.0"); 
+>>>>>>> e895a2f0b4ff87997247e344370b60dda5f4f5e0
     return FHIR.oauth2.ready()
     .then(client => client.request("Patient"));
    
