@@ -69,12 +69,10 @@
       }
     }
 
-    console.log("2.0.7.1"); 
+    console.log("2.3.1.1"); 
     return FHIR.oauth2.ready()
     .then(client => client.request("Patient"))
     .catch(console.log("error"));
-   
-
     
     //FHIR.oauth2.ready(onReady, onError);
     //return ret.promise();
