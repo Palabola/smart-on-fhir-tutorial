@@ -69,8 +69,16 @@
       }
     }
 
-    FHIR.oauth2.ready(onReady, onError);
-    return ret.promise();
+    return FHIR.oauth2.ready()
+    .then(client => client.request("Patient"))
+    .then(() => {
+      console.log("asd"); 
+      $('#loading').hide(); 
+      $('#holder').show();})
+    .catch((error) => {console.error(error);});
+
+    //FHIR.oauth2.ready(onReady, onError);
+    //return ret.promise();
 
   };
 
