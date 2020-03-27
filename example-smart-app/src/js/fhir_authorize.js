@@ -1,4 +1,3 @@
-import FHIR from "fhirclient"
 
 (function(window){
 FHIR.oauth2.authorize({
